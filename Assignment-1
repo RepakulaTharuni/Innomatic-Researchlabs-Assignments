@@ -1,0 +1,71 @@
+
+
+
+correct_username = "admin"
+correct_password = "1234"
+
+
+username = input("Enter username: ")
+password = input("Enter password: ")
+
+
+if username == correct_username and password == correct_password:
+    print("Login Successful")
+else:
+    print("Invalid Credentials")
+
+
+
+marks = [45, 78, 90, 33, 60]
+
+pass_count = 0
+fail_count = 0
+
+for mark in marks:
+    if mark >= 50:
+        pass_count += 1
+    else:
+        fail_count += 1
+
+print("\nPass / Fail Analysis")
+print("Total Students Passed:", pass_count)
+print("Total Students Failed:", fail_count)
+
+
+
+
+names = [" Alice ", "bob", " CHARLIE "]
+
+cleaned_names = []
+
+for name in names:
+    cleaned_name = name.strip().lower()  # remove spaces + convert to lowercase
+    cleaned_names.append(cleaned_name)
+
+print("\nCleaned Names List:")
+print(cleaned_names)
+
+
+
+messages = ["Hi", "Welcome to the platform", "OK"]
+
+print("\nMessage Length Analysis:")
+for message in messages:
+    length = len(message)
+    print(f"Message: '{message}' | Length: {length}")
+    
+    if length > 10:
+        print("-> This message is longer than 10 characters")
+
+
+
+
+logs = ["INFO", "ERROR", "WARNING", "ERROR"]
+
+error_count = 0
+
+for log in logs:
+    if log == "ERROR":
+        error_count += 1
+
+print("\nTotal ERROR messages:", error_count)
