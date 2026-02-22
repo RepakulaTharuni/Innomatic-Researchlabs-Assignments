@@ -1,0 +1,163 @@
+Problem 1: Social Media – Post Engagement Analyzer
+
+def analyze_engagement(likes_list):
+    total_likes = 0
+    
+    for likes in likes_list:
+        total_likes += likes
+    
+    if total_likes >= 1000:
+        status = "Viral Post"
+    else:
+        status = "Normal Engagement"
+    
+    print("Total Likes:", total_likes)
+    print("Post Status:", status)
+
+analyze_engagement([200, 300, 150, 400])
+
+Problem 2: Healthcare – Medicine Stock Alert System
+def check_medicine_stock(stock):
+    if stock < 10:
+        status = "Low Stock Alert"
+    else:
+        status = "Stock Sufficient"
+    
+    print("Medicine Stock:", stock)
+    print("Status:", status)
+check_medicine_stock(6)
+
+
+Problem 3: Agriculture – Rainfall Adequacy Checker
+
+def rainfall_checker(rainfall_list, required_level):
+    total = 0
+    
+    for rain in rainfall_list:
+        total += rain
+    
+    average = total / len(rainfall_list)
+    
+    if average >= required_level:
+        status = "Adequate Rainfall"
+    else:
+        status = "Inadequate Rainfall"
+    
+    print("Average Rainfall:", average)
+    print("Rainfall Status:", status)
+
+rainfall_checker([60, 75, 80], 70)
+
+
+Problem 4: Social Media – Duplicate Account Detection
+
+def detect_duplicates(usernames):
+    unique_users = set(usernames)
+    
+    if len(unique_users) != len(usernames):
+        print("Duplicate Accounts Found: Yes")
+    else:
+        print("Duplicate Accounts Found: No")
+
+detect_duplicates(["user1", "user2", "user3", "user1"])
+
+
+Problem 5: Healthcare – Appointment Eligibility Checker
+
+def appointment_eligibility(age):
+    if age >= 18:
+        status = "Eligible"
+    else:
+        status = "Not Eligible"
+    
+    print("Patient Age:", age)
+    print("Eligibility Status:", status)
+appointment_eligibility(21)
+
+
+Problem 6: Agriculture – Premium Crop Price Filter
+
+def premium_crop_filter(prices):
+    premium_crops = []
+    
+    for price in prices:
+        if price > 2000:
+            premium_crops.append(price)
+    
+    print("Premium Crops:", premium_crops)
+premium_crop_filter([1500, 2500, 3200, 1800])
+
+Problem 7: System Monitoring – Application Health Checker
+
+def application_health(errors):
+    if errors == 0:
+        status = "Healthy"
+    elif errors <= 5:
+        status = "Minor Issues"
+    else:
+        status = "Critical Issues"
+    
+    print("Error Count:", errors)
+    print("System Status:", status)
+application_health(7)
+
+
+Problem 8: Banking – Daily Transaction Limit Checker
+
+def transaction_checker(amount):
+    daily_limit = 50000
+    
+    if amount <= daily_limit:
+        status = "Approved"
+    else:
+        status = "Rejected"
+    
+    print("Transaction Amount:", amount)
+    print("Transaction Status:", status)
+transaction_checker(60000)
+
+
+Problem 9: E-Learning – Student Attendance Eligibility System
+
+def attendance_checker(attendance_list):
+    total_classes = len(attendance_list)
+    attended = 0
+    
+    for day in attendance_list:
+        if day == 1:  # 1 means present
+            attended += 1
+    
+    percentage = (attended / total_classes) * 100
+    
+    if percentage >= 75:
+        status = "Eligible"
+    else:
+        status = "Not Eligible"
+    
+    print("Attendance Percentage:", percentage)
+    print("Exam Eligibility:", status)
+
+attendance_checker([1,1,0,1,1,1,1,0,1,1])
+
+Problem 10: Smart Electricity Bill Analyzer
+
+def electricity_bill(units):
+    if units <= 100:
+        bill = units * 3
+    elif units <= 200:
+        bill = (100 * 3) + (units - 100) * 5
+    else:
+        bill = (100 * 3) + (100 * 5) + (units - 200) * 7
+    
+    if bill < 500:
+        usage = "Low Usage"
+    elif bill <= 1500:
+        usage = "Moderate Usage"
+    else:
+        usage = "High Usage"
+    
+    print("Total Bill:", bill)
+    print("Usage Classification:", usage)
+electricity_bill(250)
+
+
