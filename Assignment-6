@@ -1,0 +1,118 @@
+Problem 1: Smart Parking Lot Management System
+
+def smart_parking_system(capacity, logs):
+    parked = 0
+    peak = 0
+
+    for log in logs:
+        if log == "IN":
+            parked += 1
+        elif log == "OUT" and parked > 0:
+            parked -= 1
+        if parked > peak:
+            peak = parked
+
+    print("Currently Parked Vehicles:", parked)
+    
+    if parked > capacity:
+        print("Parking Status: Exceeded Capacity ⚠")
+    else:
+        print("Parking Status: Available")
+
+    print("Peak Parking Usage:", peak)
+smart_parking_system(50, ["IN", "IN", "IN", "OUT", "IN", "IN", "OUT"])
+
+
+Problem 2: Online Food Delivery Time Estimator
+
+def estimate_delivery_time(distance, traffic, weather):
+    time = distance * 5
+    if traffic.lower() == "high":
+        time += 15
+    elif traffic.lower() == "medium":
+        time += 10
+    elif traffic.lower() == "low":
+        time += 5
+    if weather.lower() == "rainy":
+        time += 10
+    elif weather.lower() == "stormy":
+        time += 20
+
+    print("Estimated Delivery Time:", time, "minutes")
+estimate_delivery_time(8, "High", "Rainy")
+
+Problem 3: Movie Theatre Seat Occupancy Analyzer
+
+def seat_occupancy_analyzer(total_seats, booked_seats):
+    booked = len(booked_seats)
+    occupancy = (booked / total_seats) * 100
+
+    print("Occupancy:", round(occupancy), "%")
+
+    if occupancy == 100:
+        print("Show Status: Housefull")
+    elif occupancy >= 75:
+        print("Show Status: Almost Full")
+    else:
+        print("Show Status: Seats Available")
+
+    if occupancy >= 90:
+        print("Suggestion: Consider opening additional show")
+seat_occupancy_analyzer(200, [1]*150)
+
+
+Problem 4: Cloud Server Load Classification System
+
+def server_load_classifier(cpu_readings):
+    average = sum(cpu_readings) / len(cpu_readings)
+
+    print("Average CPU Load:", round(average), "%")
+
+    if average < 50:
+        print("Server Status: Normal")
+    elif 50 <= average <= 80:
+        print("Server Status: Warning")
+    else:
+        print("Server Status: Critical")
+server_load_classifier([45, 60, 70, 85, 90])
+
+
+Problem 5: Smart Classroom Resource Usage Monitor
+
+def classroom_resource_monitor(resource_usage):
+    overused = []
+    for resource, hours in resource_usage.items():
+        if hours > 8:
+            overused.append(resource)
+    if overused:
+        print("Overused Resources:", ", ".join(overused))
+        print("Energy Alert: Yes")
+    else:
+        print("Overused Resources: None")
+        print("Energy Alert: No")
+
+usage = {
+    "Projector": 6,
+    "AC": 9,
+    "Lights": 4
+}
+
+classroom_resource_monitor(usage)
+
+Problem 6: Online Event Registration Capacity Controller
+
+def event_registration_controller(capacity, registrations):
+    if registrations > capacity:
+        confirmed = capacity
+        waitlisted = registrations - capacity
+        status = "Closed"
+    else:
+        confirmed = registrations
+        waitlisted = 0
+        status = "Open"
+
+    print("Confirmed Registrations:", confirmed)
+    print("Waitlisted Users:", waitlisted)
+    print("Registration Status:", status)
+event_registration_controller(100, 105)
+
