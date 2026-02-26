@@ -1,0 +1,113 @@
+Problem 1: Smart Light Controller
+
+class SmartLight:
+    def __init__(self, light_name):
+        # Initialize light name and default status as OFF
+        self.light_name = light_name
+        self.status = "OFF"
+    
+    def turn_on(self):
+        # Method to turn the light ON
+        self.status = "ON"
+    
+    def turn_off(self):
+        # Method to turn the light OFF
+        self.status = "OFF"
+    
+    def display_status(self):
+        # Display current status of the light
+        print(f"{self.light_name} is {self.status}")
+light = SmartLight("Bedroom Light")
+light.turn_on()
+light.display_status()
+
+Problem 2: Employee ID Card System
+
+class Employee:
+    def __init__(self, name, emp_id, department):
+        # Initialize employee details
+        self.name = name
+        self.emp_id = emp_id
+        self.department = department
+    
+    def display_id_card(self):
+        # Display formatted ID card details
+        print("Employee ID Card")
+        print(f"Name: {self.name}")
+        print(f"ID: {self.emp_id}")
+        print(f"Department: {self.department}")
+employee = Employee("Rahul", "EMP102", "IT")
+employee.display_id_card()
+
+
+Problem 3: Mobile Contact Record
+
+class Contact:
+    def __init__(self, name, phone):
+        # Initialize contact details
+        self.name = name
+        self.phone = phone
+    
+    def save_contact(self):
+        # Display saved contact information
+        print("Contact Saved")
+        print(f"Name: {self.name}")
+        print(f"Phone: {self.phone}")
+
+contact = Contact("Anita", "9876543210")
+contact.save_contact()
+
+
+Problem 4: Product Price Tag Generator
+
+class Product:
+    def __init__(self, product_name, price):
+        # Initialize product details
+        self.product_name = product_name
+        self.price = price
+    
+    def display_price_tag(self):
+        # Display formatted price tag
+        print(f"Product: {self.product_name}")
+        print(f"Price: ₹{self.price}")
+
+product = Product("Headphones", 2499)
+product.display_price_tag()
+
+
+Problem 5: Movie Rating Display System
+
+class Movie:
+    def __init__(self, movie_name, rating):
+        # Initialize movie details
+        self.movie_name = movie_name
+        self.rating = rating
+    
+    def display_movie_details(self):
+        # Display movie rating
+        print(f"Movie: {self.movie_name}")
+        print(f"Rating: {self.rating} / 5")
+
+movie = Movie("Inception", 4.8)
+movie.display_movie_details()
+
+
+Problem 6: Delivery Address Manager
+
+class Delivery:
+    def __init__(self, customer_name, address):
+        # Initialize delivery details
+        self.customer_name = customer_name
+        self.address = address
+    
+    def display_delivery_details(self):
+        # Display delivery information
+        print("Delivery Details")
+        print(f"Customer: {self.customer_name}")
+        print(f"Address: {self.address}")
+
+delivery = Delivery("Suman", "Hyderabad")
+delivery.display_delivery_details()
+
+
+
