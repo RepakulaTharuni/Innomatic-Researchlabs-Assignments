@@ -1,0 +1,119 @@
+Problem 1: Unique Words in a Sentence
+entence = input("Enter sentence: ")
+
+# Split sentence into words
+words = sentence.split()
+
+# Convert list to set to remove duplicates
+unique_words = set(words)
+
+# Display results
+print("Unique words count:", len(unique_words))
+print("Unique words:", unique_words)
+
+
+Problem 2: Highest Salary from Employee Data
+employees = {
+    "Ravi": 75000,
+    "Anita": 68000,
+    "Kiran": 72000
+}
+
+# Find employee with highest salary
+highest_employee = max(employees, key=employees.get)
+
+print("Highest Salary:", highest_employee, "-", employees[highest_employee])
+
+
+Problem 3: Find Maximum and Minimum Values
+numbers = [45, 22, 89, 10, 66]
+
+# Initialize max and min with first element
+max_value = numbers[0]
+min_value = numbers[0]
+
+# Loop through list
+for num in numbers:
+    if num > max_value:
+        max_value = num
+    if num < min_value:
+        min_value = num
+
+print("List:", numbers)
+print("Max:", max_value)
+print("Min:", min_value)
+
+Problem 4: Count Products Above a Price Threshold
+prices = [450, 1200, 899, 1500, 300]
+
+count = 0
+
+# Check each price
+for price in prices:
+    if price > 1000:
+        count += 1
+
+print("Products above 1000:", count)
+
+
+Problem 5: Calculate Attendance Percentage
+attendance = ["P", "P", "A", "P", "P"]
+
+# Count Present days
+present_count = attendance.count("P")
+
+# Calculate percentage
+percentage = (present_count / len(attendance)) * 100
+
+print("Attendance Percentage:", percentage)
+
+Problem 6: Remove Duplicate Phone Numbers
+phone_numbers = [9876543210, 9123456789, 9876543210]
+
+# Convert list to set
+unique_numbers = set(phone_numbers)
+
+print("Unique phone numbers:", unique_numbers)
+
+Problem 7: Count Character Frequency
+text = "python"
+
+char_count = {}
+
+# Count frequency of each character
+for char in text:
+    if char in char_count:
+        char_count[char] += 1
+    else:
+        char_count[char] = 1
+
+print(char_count)
+
+Problem 8: Convert List to Tuple
+numbers_list = [10, 20, 30]
+
+# Convert to tuple
+numbers_tuple = tuple(numbers_list)
+
+print("Tuple:", numbers_tuple)
+
+Problem 9: Check if a Key Exists in a Dictionary
+employees = {
+    "Ravi": 75000,
+    "Anita": 68000
+}
+
+key_to_check = "Ravi"
+
+if key_to_check in employees:
+    print("Employee exists")
+else:
+    print("Employee does not exist")
+
+Problem 10: Calculate Average Marks
+marks = [70, 75, 80, 65]
+
+# Calculate average
+average = sum(marks) / len(marks)
+
+print("Average Marks:", average)
