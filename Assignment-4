@@ -1,0 +1,134 @@
+Problem 1: Mobile Recharge Validation System
+
+def validate_recharge(amount, plan):
+    valid_plans = [199, 299, 399, 599]
+    
+    if amount < 50:
+        return "Recharge amount must be at least ₹50."
+    
+    if plan not in valid_plans:
+        return "Invalid plan selected."
+    
+    return "Recharge Successful!"
+while True:
+    try:
+        amount = int(input("Enter recharge amount: ₹"))
+        plan = int(input("Enter plan (199, 299, 399, 599): "))
+        
+        result = validate_recharge(amount, plan)
+        print(result)
+        
+        if result == "Recharge Successful!":
+            break
+        else:
+            print("Please try again.\n")
+    except ValueError:
+        print("Invalid input. Please enter numeric values.\n")
+
+Problem 2: Inventory Reorder Alert System
+
+def check_inventory(products):
+    for product, stock in products.items():
+        if stock < 15:
+            print(f"{product}: Reorder Alert ⚠")
+        else:
+            print(f"{product}: Stock OK")
+
+inventory = {
+    "Rice": 10,
+    "Wheat": 25,
+    "Sugar": 8,
+    "Oil": 20
+}
+
+check_inventory(inventory)
+
+
+Problem 3: Student Result Processing System
+
+
+def student_result(marks):
+    total = 0
+    
+    for mark in marks:
+        total += mark
+    
+    average = total / len(marks)
+    
+    if average >= 50:
+        return f"Average: {average:.2f} - Pass"
+    else:
+        return f"Average: {average:.2f} - Fail"
+
+marks_list = [60, 70, 45, 80, 55]
+print(student_result(marks_list))
+
+
+Problem 4: Cab Fare Estimator with Retry Option
+
+
+def calculate_fare(distance, peak):
+    base_fare = 50
+    per_km_rate = 12
+    
+    fare = base_fare + (distance * per_km_rate)
+    
+    if peak.lower() == "yes":
+        fare += fare * 0.25   # 25% extra
+    
+    return fare
+
+while True:
+    try:
+        distance = float(input("Enter distance in km: "))
+        peak = input("Is it peak hour? (yes/no): ")
+        
+        total_fare = calculate_fare(distance, peak)
+        print(f"Total Fare: ₹{total_fare:.2f}")
+        
+        break
+    except ValueError:
+        print("Invalid input. Please try again.\n")
+
+Problem 5: Employee Attendance Eligibility Checker
+
+def check_attendance(attendance_list):
+    present_days = 0
+    
+    for day in attendance_list:
+        if day == "P":
+            present_days += 1
+    
+    percentage = (present_days / len(attendance_list)) * 100
+    
+    if percentage >= 75:
+        return f"Attendance: {percentage:.2f}% - Eligible"
+    else:
+        return f"Attendance: {percentage:.2f}% - Not Eligible"
+
+attendance = ["P", "P", "A", "P", "P", "A", "P", "P"]
+print(check_attendance(attendance))
+
+
+Problem 6: Password Strength Checker
+
+def check_password(password):
+    has_digit = False
+    has_special = False
+    special_chars = "@#$"
+    
+    if len(password) < 8:
+        return "Weak Password: Must be at least 8 characters."
+    
+    for char in password:
+        if char.isdigit():
+            has_digit = True
+        if char in special_chars:
+            has_special = True
+    
+    if has_digit and has_special:
+        return "Strong Password ✅"
+    else:
+        return "Weak Password: Must contain at least one digit and one special character (@#$)."
+pwd = input("Enter password: ")
+print(check_password(pwd))
