@@ -1,8 +1,8 @@
 # Task 4: Fine-Tuning BERT on Kaggle Dataset | Feb Internship NLP 2026
 
 ## 📌 Internship Details
-- **Program:** Data Science Internship – February 2026  
-- **Task:** NLP Task 4 – Fine-Tuning BERT on Kaggle Dataset  
+- Program: Data Science Internship – February 2026  
+- Task:NLP Task 4 – Fine-Tuning BERT on Kaggle Dataset  
 
 ## 🎯 Objective
 The objective of this project is to build a text classification model by fine-tuning a pre-trained BERT model on a real-world dataset. The project focuses on understanding transformer-based models, applying tokenization, training, and evaluating performance using multiple metrics.
@@ -10,8 +10,8 @@ The objective of this project is to build a text classification model by fine-tu
 
 
 ## 📂 Dataset
-- **Dataset Used:** IMDB Movie Reviews Dataset (Kaggle)  
-- The dataset contains movie reviews labeled as **positive** or **negative** for sentiment analysis.
+- Dataset Used:IMDB Movie Reviews Dataset (Kaggle)  
+- The dataset contains movie reviews labeled as positive or negative for sentiment analysis.
 
 
 
@@ -99,6 +99,3 @@ Evaluated using:
 ## 🚀 Conclusion
 This project demonstrates how transformer-based models like BERT can be effectively fine-tuned for sentiment analysis tasks. It highlights the importance of experimentation and evaluation in achieving optimal performance.
 
----
-
-## 📁 Repository Structure
